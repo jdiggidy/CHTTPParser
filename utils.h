@@ -9,6 +9,8 @@
 #ifndef utils_h
 #define utils_h
 
+#include <http_parser/http_parser.h>
+
 const char* get_method(http_parser* parser);
 unsigned int get_upgrade_value(http_parser* parser);
 unsigned int get_status_code(http_parser* parser);
