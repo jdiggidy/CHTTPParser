@@ -1,4 +1,5 @@
 module http_parser_helper {
     header "utils.h"
+    link "http_parser"
     export *
 }
