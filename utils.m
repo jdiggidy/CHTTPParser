@@ -6,8 +6,6 @@
 //  Copyright © 2015 IBM. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <http_parser.h>
 
 #include "utils.h"
 
