@@ -8,6 +8,7 @@
 
 
 #include "utils.h"
+#include <string.h>
 
 unsigned int get_upgrade_value(http_parser* parser) {
     return parser->upgrade;
