@@ -19,9 +19,17 @@
 
 #include "http_parser.h"
 
-const char* get_method(http_parser* parser);
-unsigned int get_upgrade_value(http_parser* parser);
-unsigned int get_status_code(http_parser* parser);
+extern inline const char* get_method(http_parser* parser) {
+    return http_method_str(parser->method);
+}
+
+extern inline unsigned int get_upgrade_value(http_parser* parser) {
+    return parser->upgrade;
+}
+
+extern inline unsigned int get_status_code(http_parser* parser) {
+    return parser->status_code;
+}
 
 /* Result structure for http_parser_parse_url().
  *
@@ -42,8 +50,18 @@ struct http_parser_url_url {
     struct http_parser_url_field_data field_data[UF_MAX];
 };
 
-int http_parser_parse_url_url (const char *buf, size_t buflen,
-                          int is_connect,
-                               struct http_parser_url_url *u);
+extern inline int http_parser_parse_url_url (const char *buf, size_t buflen,
+                                             int is_connect,
+                                             struct http_parser_url_url *u) {
+    
+    struct http_parser_url url;
+    int res = http_parser_parse_url (buf, buflen,
+                                     is_connect, &url);
+    u->field_set = url.field_set;
+    u->port = url.port;
+    memcpy(u->field_data, url.field_data, sizeof(url.field_data));
+    
+    return res;
+}
 
 #endif /* utils_h */
