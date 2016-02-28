@@ -17,6 +17,8 @@
 #ifndef utils_h
 #define utils_h
 
+#include <string.h>
+
 #include "http_parser.h"
 
 extern inline const char* get_method(http_parser* parser) {
