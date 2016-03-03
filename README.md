@@ -1,4 +1,5 @@
-# Kitura-HttpParserHelper
-Shim for libHttpParser
+# CHttpParser
 
-This shim allows full use of the [http-parser](https://github.com/nodejs/http-parser) library in Swift
+**Modulemap for libhttp-parser**
+
+This module binds the [http-parser](https://github.com/nodejs/http-parser) library to Swift.
