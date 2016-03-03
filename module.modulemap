@@ -14,8 +14,8 @@
  * limitations under the License.
  **/
 
-module http_parser_helper {
-    header "utils.h"
+module CHttpParser {
+    header "shim.h"
     link "http_parser"
     export *
 }
