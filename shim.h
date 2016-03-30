@@ -19,7 +19,7 @@
 
 #include <string.h>
 
-#include "http_parser.h"
+#include <http_parser.h>
 
 extern inline const char* get_method(http_parser* parser) {
     return http_method_str(parser->method);
