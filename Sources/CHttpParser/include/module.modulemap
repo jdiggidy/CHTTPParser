@@ -15,7 +15,8 @@
  **/
 
 module CHttpParser {
-    header "shim.h"
-    link "http_parser"
+    header "../http_parser.h"
+    header "../utils.h"
+    link "CHttpParser"
     export *
 }
