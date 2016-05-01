@@ -1,9 +1,0 @@
-prefix=/usr/local
-includedir=${prefix}/include
-libdir=${prefix}/lib
-
-Name: http-parser
-Description: HTTP Parsing Library
-Version: 2.6.0
-Cflags: -I${includedir}
-Libs: -L${libdir} -lhttp_parser
