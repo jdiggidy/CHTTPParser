@@ -17,6 +17,6 @@
 import PackageDescription
 
 let package = Package(
-    name: "CHttpParser",
+    name: "CHTTPParser",
     dependencies: [ ])
 

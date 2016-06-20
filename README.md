@@ -1,4 +1,4 @@
-# CHttpParser
+# CHTTPParser
 
 **Modulemap for libhttp-parser**
 
