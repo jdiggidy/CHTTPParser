@@ -17,6 +17,6 @@
 module CHTTPParser {
     header "../http_parser.h"
     header "../utils.h"
-    link "CHttpParser"
+    link "CHTTPParser"
     export *
 }
