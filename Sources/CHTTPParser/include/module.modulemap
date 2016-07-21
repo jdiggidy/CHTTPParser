@@ -14,7 +14,7 @@
  * limitations under the License.
  **/
 
-module CHttpParser {
+module CHTTPParser {
     header "../http_parser.h"
     header "../utils.h"
     link "CHttpParser"
